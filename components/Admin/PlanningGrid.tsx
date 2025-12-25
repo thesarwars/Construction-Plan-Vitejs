@@ -155,7 +155,11 @@ const PlanningGrid: React.FC<PlanningGridProps> = ({ state, setState }) => {
                           {emp.name}
                         </span>
                         {onVacation && <span className="text-[10px] bg-blue-200 text-blue-700 px-1.5 py-0.5 rounded uppercase font-bold">Vacation</span>}
-                        {hasWarning && <AlertCircle size={14} className="text-orange-500" title="Double booked!" />}
+                        {hasWarning && (
+                          <span title="Double booked!">
+                            <AlertCircle size={14} className="text-orange-500" />
+                          </span>
+                        )}
                       </div>
                     </th>
                   );
